@@ -1,6 +1,8 @@
 #include "Ball.h"
 #include "DxLib.h"
 #include "Game.h"
+#include <string>
+using namespace std;
 
 
 Ball::Ball()
@@ -20,12 +22,24 @@ void Ball::update()
 {
 	speedY += 0.5;
 
-	if (x > windowWidth || x < 0)
+	if (x > windowWidth)
 	{
+		x = windowWidth;
 		speedX = -speedX;
 	}
-	if (y > windowHeight || y < 0)
+	else if (x < 0)
 	{
+		x = 0;
+		speedX = -speedX;
+	}
+	if (y > windowHeight)
+	{
+		y = windowHeight;
+		speedY = -speedY;
+	}
+	else if (y < 0)
+	{
+		y = 0;
 		speedY = -speedY;
 	}
 

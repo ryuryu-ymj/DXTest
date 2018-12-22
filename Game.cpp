@@ -2,15 +2,39 @@
 #include "DxLib.h"
 #include "Ball.h"
 
+Game::Game()
+{
+	balls = new Ball[10];
+}
+
+Game::~Game()
+{
+	delete[] balls;
+}
+
 void Game::update()
 {
 	GetScreenState(&windowWidth, &windowHeight, &colorBitDepth);
-	ball.update();
+	/*for (Ball ball : balls)
+	{
+		ball.update();
+	}*/
+	for (int i = 0; i < 10; i++)
+	{
+		balls[i].update();
+	}
 }
 
 void Game::render()
 {
-	ball.render();
+	/*for (Ball ball : balls)
+	{
+		ball.render();
+	}*/
+	for (int i = 0; i < 10; i++)
+	{
+		balls[i].render();
+	}
 }
 
 // ƒvƒƒOƒ‰ƒ€‚Í WinMain ‚©‚çŽn‚Ü‚è‚Ü‚·

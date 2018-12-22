@@ -8,7 +8,9 @@ static int colorBitDepth;
 class Game
 {
 public:
-	Ball ball;
+	Game();
+	~Game();
+	Ball* balls;
 	void update();
 	void render();
 };
