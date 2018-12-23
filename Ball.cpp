@@ -1,16 +1,21 @@
 #include "Ball.h"
 #include "DxLib.h"
 #include "Game.h"
-#include <string>
-using namespace std;
+#include <random>
 
 
 Ball::Ball()
 {
+	std::random_device rd;
+
+	std::mt19937 mt(rd());
+
+	std::uniform_int_distribution<int> dice(-5, 5);
+
 	x = windowWidth / 2;
 	y = windowHeight / 2;
-	speedX = GetRand(10) - 5;
-	speedY = 0;
+	speedX = dice(mt) - 5;
+	speedY = dice(mt) - 5;
 }
 
 
