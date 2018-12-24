@@ -4,37 +4,21 @@
 
 Game::Game()
 {
-	balls = new Ball[10];
 }
 
 Game::~Game()
 {
-	delete[] balls;
 }
 
 void Game::update()
 {
 	GetScreenState(&windowWidth, &windowHeight, &colorBitDepth);
-	/*for (Ball ball : balls)
-	{
-		ball.update();
-	}*/
-	for (int i = 0; i < 10; i++)
-	{
-		balls[i].update();
-	}
+	op.update();
 }
 
 void Game::render()
 {
-	/*for (Ball ball : balls)
-	{
-		ball.render();
-	}*/
-	for (int i = 0; i < 10; i++)
-	{
-		balls[i].render();
-	}
+	op.render();
 }
 
 // ƒvƒƒOƒ‰ƒ€‚Í WinMain ‚©‚çŽn‚Ü‚è‚Ü‚·

@@ -1,5 +1,7 @@
 #pragma once
-class Ball
+#include "GameObject.h"
+
+class Ball : public GameObject
 {
 public:
 	Ball();
@@ -7,7 +9,6 @@ public:
 	void update();
 	void render();
 private:
-	float x, y;
 	float speedX, speedY;
 	const int RADIUS = 20;
 };

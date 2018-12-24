@@ -14,8 +14,8 @@ Ball::Ball()
 
 	x = windowWidth / 2;
 	y = windowHeight / 2;
-	speedX = dice(mt) - 5;
-	speedY = dice(mt) - 5;
+	speedX = dice(mt);
+	speedY = dice(mt);
 }
 
 
