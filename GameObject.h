@@ -2,7 +2,7 @@
 class GameObject
 {
 public:
-	int x, y;
+	float x, y;
 	bool active;
 	GameObject();
 	virtual ~GameObject() {};

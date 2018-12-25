@@ -15,7 +15,10 @@ ObjectPool::~ObjectPool()
 
 void ObjectPool::update()
 {
-	updateGameObjects(balls, BALLS_SIZE);
+	for (int i = 0; i < BALLS_SIZE; i++)
+	{
+		balls[i].update();
+	}
 }
 
 void ObjectPool::render()
@@ -24,17 +27,4 @@ void ObjectPool::render()
 	{
 		balls[i].render();
 	}
-}
-
-void ObjectPool::updateGameObjects(GameObject* objects, int objectsSize)
-{
-	for (int i = 0; i < objectsSize; i++)
-	{
-		objects[i].update();
-	}
-}
-
-void ObjectPool::updateGameObject(GameObject* object_ptr)
-{
-	object_ptr->update();
 }
