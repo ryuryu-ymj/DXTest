@@ -23,7 +23,7 @@ Ball::~Ball()
 {
 }
 
-void Ball::update()
+void Ball::Update()
 {
 	speedY += 0.5;
 
@@ -52,7 +52,7 @@ void Ball::update()
 	y += speedY;
 }
 
-void Ball::render()
+void Ball::Render()
 {
 	DrawCircle((int)x, (int)y, RADIUS, GetColor(255, 0, 0), TRUE);
 }

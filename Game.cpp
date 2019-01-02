@@ -4,22 +4,22 @@
 
 Game::Game()
 {
-	op.addObjects<Ball>(5);
+	op.AddObjects<Ball>(5);
 }
 
 Game::~Game()
 {
 }
 
-void Game::update()
+void Game::Update()
 {
 	GetScreenState(&windowWidth, &windowHeight, &colorBitDepth);
-	op.update();
+	op.Update();
 }
 
-void Game::render()
+void Game::Render()
 {
-	op.render();
+	op.Render();
 }
 
 // プログラムは WinMain から始まります
@@ -47,8 +47,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DrawBox(50, 300, 100, 400, GetColor(0, 0, 255), 1);
 		DrawLine(200, 300, 300, 400, GetColor(255, 255, 255), 1);*/
 
-		game.render();
-		game.update();
+		game.Render();
+		game.Update();
 
 		ScreenFlip();//裏画面を表画面にコピー
 	}

@@ -6,8 +6,8 @@ class Ball : public GameObject
 public:
 	Ball();
 	~Ball();
-	void update();
-	void render();
+	void Update();
+	void Render();
 private:
 	float speedX, speedY;
 	const int RADIUS = 20;

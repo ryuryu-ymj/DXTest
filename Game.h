@@ -13,7 +13,7 @@ public:
 	ObjectPool op;
 	Game();
 	~Game();
-	void update();
-	void render();
+	void Update();
+	void Render();
 };
 

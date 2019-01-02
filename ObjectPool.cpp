@@ -12,29 +12,29 @@ ObjectPool::~ObjectPool()
 {
 }
 
-void ObjectPool::update()
+void ObjectPool::Update()
 {
 	for (vector<GameObject*> objs : objs_list)
 	{
 		for (GameObject* obj : objs)
 		{
-			obj->update();
+			obj->Update();
 		}
 	}
 }
 
-void ObjectPool::render()
+void ObjectPool::Render()
 {
 	for (vector<GameObject*> objs : objs_list)
 	{
 		for (GameObject* obj : objs)
 		{
-			obj->render();
+			obj->Render();
 		}
 	}
 }
 
-void ObjectPool::addObjects(vector<GameObject*> objs)
+void ObjectPool::AddObjects(vector<GameObject*> objs)
 {
 	objs_list.push_back(objs);
 }
