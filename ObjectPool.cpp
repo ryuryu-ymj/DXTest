@@ -1,30 +1,40 @@
 #include "ObjectPool.h"
+using namespace std;
 
 
 
 ObjectPool::ObjectPool()
 {
-	balls = new Ball[BALLS_SIZE];
 }
 
 
 ObjectPool::~ObjectPool()
 {
-	delete[] balls;
 }
 
 void ObjectPool::update()
 {
-	for (int i = 0; i < BALLS_SIZE; i++)
+	for (vector<GameObject*> objs : objs_list)
 	{
-		balls[i].update();
+		for (GameObject* obj : objs)
+		{
+			obj->update();
+		}
 	}
 }
 
 void ObjectPool::render()
 {
-	for (int i = 0; i < BALLS_SIZE; i++)
+	for (vector<GameObject*> objs : objs_list)
 	{
-		balls[i].render();
+		for (GameObject* obj : objs)
+		{
+			obj->render();
+		}
 	}
+}
+
+void ObjectPool::addObjects(vector<GameObject*> objs)
+{
+	objs_list.push_back(objs);
 }

@@ -4,6 +4,7 @@
 
 Game::Game()
 {
+	op.addObjects<Ball>(5);
 }
 
 Game::~Game()
