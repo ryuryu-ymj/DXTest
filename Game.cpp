@@ -1,10 +1,21 @@
 #include "Game.h"
 #include "DxLib.h"
 #include "Ball.h"
+#include <vector>
+using namespace std;
 
 Game::Game()
 {
 	op.AddObjects<Ball>(5);
+	op.AddObjects<Ball>(5);
+	/*for (int i = 0; i < 5; i++)
+	{
+		Ball* ball;
+		ball = new Ball();
+		balls.push_back(ball);
+	}
+	vector<GameObject*> bases(begin(balls), end(balls));
+	op.AddObjects(bases);*/
 }
 
 Game::~Game()

@@ -10,6 +10,13 @@ ObjectPool::ObjectPool()
 
 ObjectPool::~ObjectPool()
 {
+	for (vector<GameObject*> objs : objs_list)
+	{
+		for (GameObject* obj : objs)
+		{
+			delete obj;
+		}
+	}
 }
 
 void ObjectPool::Update()

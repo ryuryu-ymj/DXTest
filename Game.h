@@ -11,6 +11,7 @@ class Game
 {
 public:
 	ObjectPool op;
+	std::vector<Ball*> balls;
 	Game();
 	~Game();
 	void Update();
